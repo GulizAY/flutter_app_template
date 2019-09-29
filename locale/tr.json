@@ -1,6 +1,12 @@
 {
   "app_title": "Uygulama",
   "main_title": "Ana",
+  "login.login_button":"Giriş",
+  "login.forgotten_button":"Şifremi Unuttum",
+  "login.signup_button":"Kayıt Ol",
+  "login.have_account_text":"Hesabınız yok mu?",
+  "login.email_text":"Email",
+  "login.pwd_text":"Şifre",
   "home_title": "Anasayfa",
   "participation_title": "Katılımlar",
   "notification_title": "Duyurular",

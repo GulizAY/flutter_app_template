@@ -1,6 +1,12 @@
 {
   "app_title": "My Application Title",
   "main_title": "My Main Title",
+  "login.login_button":"LOGIN",
+  "login.forgotten_button":"Forgotten Password?",
+  "login.signup_button":"SIGN UP",
+  "login.have_account_text":"Don't have an account?",
+  "login.email_text":"Email",
+  "login.pwd_text":"Password",
   "home_title": "Home",
   "participation_title": "Participations",
   "notification_title": "Notifications",

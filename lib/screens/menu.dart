@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import './notification/index.dart';
-import './home/index.dart';
-import './participation/index.dart';
-import './setting/index.dart';
 import './../theme/style.dart';
 import '../blocs/themeBloc.dart';
+import '../utils/app_localizations.dart';
+
+import './authentication/login.dart';
+import './home/index.dart';
+import './notification/index.dart';
+import './participation/index.dart';
+import './setting/index.dart';
 
 class Menu extends StatefulWidget {
 
@@ -54,11 +57,11 @@ class _MenuState extends State<Menu> {
                 ),
               ),
             ),
-            MenuItem(Icons.home, 'Home', () => Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new Home(widget.darkThemeEnable, widget.bloc)))),
-            MenuItem(Icons.notifications, 'Notification', () => Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new Notifications(widget.darkThemeEnable, widget.bloc)))),
-            MenuItem(Icons.assignment_turned_in, 'Participation', () => Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new Participation(widget.darkThemeEnable, widget.bloc)))),
-            MenuItem(Icons.settings, 'Settings', () => Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new Setting(widget.darkThemeEnable, widget.bloc)))),
-            MenuItem(Icons.lock, 'Log Out', () => {}),
+            MenuItem(Icons.home, AppLocalizations.of(context).translate('home_title'), () => Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new Home(widget.darkThemeEnable, widget.bloc)))),
+            MenuItem(Icons.notifications, AppLocalizations.of(context).translate('notification_title'), () => Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new Notifications(widget.darkThemeEnable, widget.bloc)))),
+            MenuItem(Icons.assignment_turned_in, AppLocalizations.of(context).translate('participation_title'), () => Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new Participation(widget.darkThemeEnable, widget.bloc)))),
+            MenuItem(Icons.settings, AppLocalizations.of(context).translate('setting_title'), () => Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new Setting(widget.darkThemeEnable, widget.bloc)))),
+            MenuItem(Icons.lock, 'Log Out', () => Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new LoginPage(widget.darkThemeEnable, widget.bloc)))),
           ],
         ),
     );
