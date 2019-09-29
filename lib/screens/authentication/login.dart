@@ -33,19 +33,19 @@ class _LoginPageState extends State<LoginPage>{
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'Logo',
-              style: TextStyle(
-                fontSize: 50.0,
-                fontWeight: FontWeight.bold,
-                fontFamily: "Pacifico"
+            Material(
+              borderRadius: BorderRadius.all(Radius.circular(50.0)),
+              elevation: 5.0,
+              child: Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Image.asset('image/logo.png', width: 80, height: 80),
               ),
             ),
             SizedBox(height: 40.0,),
             Text(
               AppLocalizations.of(context).translate('app_title'),
               style: TextStyle(
-                fontSize: 32.0,
+                fontSize: 26.0,
                 fontWeight: FontWeight.bold,
                 color: Colors.orangeAccent//Theme.of(context).primaryColor
               ),
